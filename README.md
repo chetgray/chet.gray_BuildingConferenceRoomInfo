@@ -40,7 +40,7 @@ User Story #211908: MVC: Building and Conference Room Information Site
 > - [x] You should also have a Conference Room Information ViewModel.
 > - [ ] When the user clicks the "Building Information" link, load up
 >   the Building Information Model with 5 buildings.
->   - [ ] Use the Waystar offices at this link for the building info.
+>   - [x] Use the Waystar offices at this link for the building info.
 >   Load all except the Boston office (that closed) - you can make up
 >   the zip, phone, number of floors, and number of conference rooms:
 >   <https://craft.co/waystar/locations>
@@ -51,7 +51,7 @@ User Story #211908: MVC: Building and Conference Room Information Site
 > - [ ] When the user clicks the "Conference Room Information" link,
 >   load up the Conference Room Information Model with 20 conference
 >   rooms.
->   - [ ] You can just make this stuff up, but please DO put the Waystar
+>   - [x] You can just make this stuff up, but please DO put the Waystar
 >   buildings in your `RoomBuilding` fields!
 > - [ ] After loading the `Model` and converting to the `ViewModel`,
 >   take the user to the Conference Room Information page and show the
