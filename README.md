@@ -16,28 +16,28 @@ User Story #211908: MVC: Building and Conference Room Information Site
 >   take them to the "Building Information" page.
 > - [ ] If they click on the "Conference Room Information" link, it
 >   should take them to the "Conference Room Information" page.
-> - [ ] You should have a Building Information Model with the following
+> - [x] You should have a Building Information Model with the following
 >   information:
->   - [ ] Building ID
->   - [ ] Building Name
->   - [ ] Building Address - Street
->   - [ ] Build Address - City
->   - [ ] Building Address - State
->   - [ ] Building Address - Zip
->   - [ ] Building Address - Country
->   - [ ] Build Main Phone Number
->   - [ ] Number of Floors
->   - [ ] Number of Conference Rooms
-> - [ ] You should also have a Building Information ViewModel.
-> - [ ] You should have a Conference Room Information Model with the
+>   - [x] Building ID
+>   - [x] Building Name
+>   - [x] Building Address - Street
+>   - [x] Build Address - City
+>   - [x] Building Address - State
+>   - [x] Building Address - Zip
+>   - [x] Building Address - Country
+>   - [x] Build Main Phone Number
+>   - [x] Number of Floors
+>   - [x] Number of Conference Rooms
+> - [x] You should also have a Building Information ViewModel.
+> - [x] You should have a Conference Room Information Model with the
 >   following information:
->   - [ ] Conference Room ID
->   - [ ] Conference Room Name
->   - [ ] Conference Room Building
->   - [ ] Conference Room Phone Number
->   - [ ] Conference Room - A/V Capable (true / false)
->   - [ ] Conference Room Capacity
-> - [ ] You should also have a Conference Room Information ViewModel.
+>   - [x] Conference Room ID
+>   - [x] Conference Room Name
+>   - [x] Conference Room Building
+>   - [x] Conference Room Phone Number
+>   - [x] Conference Room - A/V Capable (true / false)
+>   - [x] Conference Room Capacity
+> - [x] You should also have a Conference Room Information ViewModel.
 > - [ ] When the user clicks the "Building Information" link, load up
 >   the Building Information Model with 5 buildings.
 >   - [ ] Use the Waystar offices at this link for the building info.
