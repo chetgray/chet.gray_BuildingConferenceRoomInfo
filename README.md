@@ -14,7 +14,7 @@ User Story #211908: MVC: Building and Conference Room Information Site
 >   "Building Information" and "Conference Room Information".
 > - [x] If the user clicks on the "Building Information" link, it should
 >   take them to the "Building Information" page.
-> - [ ] If they click on the "Conference Room Information" link, it
+> - [x] If they click on the "Conference Room Information" link, it
 >   should take them to the "Conference Room Information" page.
 > - [x] You should have a Building Information Model with the following
 >   information:
@@ -48,15 +48,15 @@ User Story #211908: MVC: Building and Conference Room Information Site
 >   take the user to the Building Information page and show the 5
 >   buildings and their information in list form.
 > - [x] The list should not be editable nor delete-able.
-> - [ ] When the user clicks the "Conference Room Information" link,
+> - [x] When the user clicks the "Conference Room Information" link,
 >   load up the Conference Room Information Model with 20 conference
 >   rooms.
 >   - [x] You can just make this stuff up, but please DO put the Waystar
 >   buildings in your `RoomBuilding` fields!
-> - [ ] After loading the `Model` and converting to the `ViewModel`,
+> - [x] After loading the `Model` and converting to the `ViewModel`,
 >   take the user to the Conference Room Information page and show the
 >   20 conference rooms and their information in list form.
-> - [ ] The list should not be editable nor delete-able.
+> - [x] The list should not be editable nor delete-able.
 >
 > NOTE: Any direct links must be done the MVC way, with
 > `@html.ActionLink`, NOT the `<a href=>` HTML way.

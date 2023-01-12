@@ -12,9 +12,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         // GET: Building
         public ActionResult Index()
         {
-            var buildingViewModels = Examples.Select(
-                (model) => ConvertToViewModel(model)
-            );
+            var buildingViewModels = Examples.Select((model) => ConvertToViewModel(model));
             return View(buildingViewModels);
         }
 
