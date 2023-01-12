@@ -16,7 +16,6 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             return View(buildingViewModels);
         }
 
-        [NonAction]
         public static BuildingViewModel ConvertToViewModel(BuildingModel model)
         {
             return new BuildingViewModel
