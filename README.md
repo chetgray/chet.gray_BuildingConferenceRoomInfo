@@ -10,7 +10,7 @@ User Story #211908: MVC: Building and Conference Room Information Site
 > The application's purpose is to show information about a company's
 > buildings and their conference rooms. Here are the details:
 >
-> - [ ] The application should have a Welcome page with links to
+> - [x] The application should have a Welcome page with links to
 >   "Building Information" and "Conference Room Information".
 > - [ ] If the user clicks on the "Building Information" link, it should
 >   take them to the "Building Information" page.
