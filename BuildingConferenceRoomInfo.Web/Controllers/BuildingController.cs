@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Web.Mvc;
 
 using BuildingConferenceRoomInfo.Web.Models;
@@ -11,7 +12,10 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         // GET: Building
         public ActionResult Index()
         {
-            return View();
+            var buildingViewModels = Examples.Select(
+                (model) => ConvertToViewModel(model)
+            );
+            return View(buildingViewModels);
         }
 
         public static BuildingViewModel ConvertToViewModel(BuildingModel model)
@@ -31,7 +35,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             };
         }
 
-        public static List<BuildingModel> Examples { get; } =
+        public static IList<BuildingModel> Examples { get; } =
             new List<BuildingModel>
             {
                 new BuildingModel

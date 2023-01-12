@@ -12,7 +12,7 @@ User Story #211908: MVC: Building and Conference Room Information Site
 >
 > - [x] The application should have a Welcome page with links to
 >   "Building Information" and "Conference Room Information".
-> - [ ] If the user clicks on the "Building Information" link, it should
+> - [x] If the user clicks on the "Building Information" link, it should
 >   take them to the "Building Information" page.
 > - [ ] If they click on the "Conference Room Information" link, it
 >   should take them to the "Conference Room Information" page.
@@ -38,16 +38,16 @@ User Story #211908: MVC: Building and Conference Room Information Site
 >   - [x] Conference Room - A/V Capable (true / false)
 >   - [x] Conference Room Capacity
 > - [x] You should also have a Conference Room Information ViewModel.
-> - [ ] When the user clicks the "Building Information" link, load up
+> - [x] When the user clicks the "Building Information" link, load up
 >   the Building Information Model with 5 buildings.
 >   - [x] Use the Waystar offices at this link for the building info.
 >   Load all except the Boston office (that closed) - you can make up
 >   the zip, phone, number of floors, and number of conference rooms:
 >   <https://craft.co/waystar/locations>
-> - [ ] After loading the `Model` and converting to the `ViewModel`,
+> - [x] After loading the `Model` and converting to the `ViewModel`,
 >   take the user to the Building Information page and show the 5
 >   buildings and their information in list form.
-> - [ ] The list should not be editable nor delete-able.
+> - [x] The list should not be editable nor delete-able.
 > - [ ] When the user clicks the "Conference Room Information" link,
 >   load up the Conference Room Information Model with 20 conference
 >   rooms.
