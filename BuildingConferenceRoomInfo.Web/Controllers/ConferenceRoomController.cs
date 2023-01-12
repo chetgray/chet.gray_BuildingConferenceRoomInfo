@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 
 using BuildingConferenceRoomInfo.Web.Models;
+using BuildingConferenceRoomInfo.Web.ViewModels;
 
 namespace BuildingConferenceRoomInfo.Web.Controllers
 {
@@ -11,6 +12,19 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public static ConferenceRoomViewModel ConvertToViewModel(ConferenceRoomModel model)
+        {
+            return new ConferenceRoomViewModel
+            {
+                Id = model.Id,
+                Name = model.Name,
+                Building = BuildingController.ConvertToViewModel(model.Building),
+                Phone = model.Phone,
+                IsAVCapable = model.IsAVCapable,
+                Capacity = model.Capacity,
+            };
         }
 
         public static List<ConferenceRoomModel> Examples { get; } =
