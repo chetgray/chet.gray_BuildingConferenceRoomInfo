@@ -20,8 +20,9 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         // GET: Building/List
         public ActionResult List()
         {
-            IEnumerable<BuildingModel> models = _bll.GetAll();
-            IEnumerable<BuildingViewModel> viewModels = ConvertManyToViewModels(models);
+            List<BuildingModel> models = (List<BuildingModel>)_bll.GetAll();
+            List<BuildingViewModel> viewModels =
+                (List<BuildingViewModel>)ConvertManyToViewModels(models);
 
             return View(viewModels);
         }
@@ -49,7 +50,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             IEnumerable<BuildingModel> models
         )
         {
-            ICollection<BuildingViewModel> viewModels = new List<BuildingViewModel>();
+            List<BuildingViewModel> viewModels = new List<BuildingViewModel>();
 
             foreach (BuildingModel model in models)
             {
