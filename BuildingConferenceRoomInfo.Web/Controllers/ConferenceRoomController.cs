@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
 
 using BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs;
@@ -15,9 +15,15 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         // GET: ConferenceRoom
         public ActionResult Index()
         {
-            var conferenceRoomViewModels = _bll.GetExamples()
-                .Select((model) => ConvertToViewModel(model));
-            return View(conferenceRoomViewModels);
+            IEnumerable<ConferenceRoomModel> models = _bll.GetExamples();
+            IList<ConferenceRoomViewModel> viewModels = new List<ConferenceRoomViewModel>();
+
+            foreach (ConferenceRoomModel model in models)
+            {
+                viewModels.Add(ConvertToViewModel(model));
+            }
+
+            return View(viewModels);
         }
 
         public ConferenceRoomViewModel ConvertToViewModel(ConferenceRoomModel model)
