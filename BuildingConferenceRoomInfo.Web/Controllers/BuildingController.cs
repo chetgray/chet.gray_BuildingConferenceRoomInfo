@@ -20,6 +20,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             return View(viewModels);
         }
 
+        [NonAction]
         public BuildingViewModel ConvertToViewModel(BuildingModel model)
         {
             return new BuildingViewModel
@@ -37,6 +38,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             };
         }
 
+        [NonAction]
         public IEnumerable<BuildingViewModel> ConvertManyToViewModels(
             IEnumerable<BuildingModel> models
         )
