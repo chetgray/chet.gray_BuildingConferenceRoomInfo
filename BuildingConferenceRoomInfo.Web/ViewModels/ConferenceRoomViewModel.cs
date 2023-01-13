@@ -6,7 +6,7 @@ namespace BuildingConferenceRoomInfo.Web.ViewModels
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public BuildingViewModel Building { get; set; }
+        public string BuildingName { get; set; }
 
         [Display(Name = "Phone Number")]
         public string Phone { get; set; }

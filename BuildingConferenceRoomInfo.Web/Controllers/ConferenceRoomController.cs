@@ -34,7 +34,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             {
                 Id = model.Id,
                 Name = model.Name,
-                Building = _buildingController.ConvertToViewModel(model.Building),
+                BuildingName = model.Building.Name,
                 Phone = model.Phone,
                 IsAVCapable = model.IsAVCapable,
                 Capacity = model.Capacity,
