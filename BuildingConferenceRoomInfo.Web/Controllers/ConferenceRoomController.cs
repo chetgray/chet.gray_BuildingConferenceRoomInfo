@@ -15,6 +15,12 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         // GET: ConferenceRoom
         public ActionResult Index()
         {
+            return RedirectToAction("List");
+        }
+
+        // GET: ConferenceRoom/List
+        public ActionResult List()
+        {
             IEnumerable<ConferenceRoomModel> models = _bll.GetExamples();
             IEnumerable<ConferenceRoomViewModel> viewModels = ConvertManyToViewModels(models);
 
