@@ -9,16 +9,17 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
 {
     public class BuildingController : Controller
     {
+        private readonly BuildingBLL _bll = new BuildingBLL();
+
         // GET: Building
         public ActionResult Index()
         {
-            var buildingViewModels = BuildingBLL
-                .GetExamples()
+            var buildingViewModels = _bll.GetExamples()
                 .Select((model) => ConvertToViewModel(model));
             return View(buildingViewModels);
         }
 
-        public static BuildingViewModel ConvertToViewModel(BuildingModel model)
+        public BuildingViewModel ConvertToViewModel(BuildingModel model)
         {
             return new BuildingViewModel
             {

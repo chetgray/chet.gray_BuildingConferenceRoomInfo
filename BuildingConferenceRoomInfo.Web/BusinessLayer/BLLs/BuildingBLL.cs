@@ -4,9 +4,9 @@ using BuildingConferenceRoomInfo.Web.Models;
 
 namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
 {
-    internal static class BuildingBLL
+    internal class BuildingBLL
     {
-        public static IList<BuildingModel> GetExamples()
+        public IList<BuildingModel> GetExamples()
         {
             IList<BuildingModel> examples = new List<BuildingModel>
             {

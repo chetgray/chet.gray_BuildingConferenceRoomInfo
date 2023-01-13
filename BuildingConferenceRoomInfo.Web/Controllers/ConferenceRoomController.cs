@@ -9,22 +9,24 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
 {
     public class ConferenceRoomController : Controller
     {
+        private readonly ConferenceRoomBLL _bll = new ConferenceRoomBLL();
+        private readonly BuildingController _buildingController = new BuildingController();
+
         // GET: ConferenceRoom
         public ActionResult Index()
         {
-            var conferenceRoomViewModels = ConferenceRoomBLL
-                .GetExamples()
+            var conferenceRoomViewModels = _bll.GetExamples()
                 .Select((model) => ConvertToViewModel(model));
             return View(conferenceRoomViewModels);
         }
 
-        public static ConferenceRoomViewModel ConvertToViewModel(ConferenceRoomModel model)
+        public ConferenceRoomViewModel ConvertToViewModel(ConferenceRoomModel model)
         {
             return new ConferenceRoomViewModel
             {
                 Id = model.Id,
                 Name = model.Name,
-                Building = BuildingController.ConvertToViewModel(model.Building),
+                Building = _buildingController.ConvertToViewModel(model.Building),
                 Phone = model.Phone,
                 IsAVCapable = model.IsAVCapable,
                 Capacity = model.Capacity,

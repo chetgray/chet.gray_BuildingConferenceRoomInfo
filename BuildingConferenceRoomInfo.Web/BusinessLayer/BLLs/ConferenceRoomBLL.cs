@@ -4,9 +4,11 @@ using BuildingConferenceRoomInfo.Web.Models;
 
 namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
 {
-    internal static class ConferenceRoomBLL
+    internal class ConferenceRoomBLL
     {
-        public static IList<ConferenceRoomModel> GetExamples()
+        private readonly BuildingBLL _buildingBll = new BuildingBLL();
+
+        public IList<ConferenceRoomModel> GetExamples()
         {
             IList<ConferenceRoomModel> conferenceRoomModels = new List<ConferenceRoomModel>
             {
@@ -14,7 +16,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 1,
                     Name = "Louisville 101",
-                    Building = BuildingBLL.GetExamples()[0],
+                    Building = _buildingBll.GetExamples()[0],
                     Phone = "(844) 492-9782 ext. 1",
                     IsAVCapable = false,
                     Capacity = 12,
@@ -23,7 +25,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 2,
                     Name = "Louisville 201",
-                    Building = BuildingBLL.GetExamples()[0],
+                    Building = _buildingBll.GetExamples()[0],
                     Phone = "(844) 492-9782 ext. 2",
                     IsAVCapable = true,
                     Capacity = 15,
@@ -32,7 +34,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 3,
                     Name = "Louisville 301",
-                    Building = BuildingBLL.GetExamples()[0],
+                    Building = _buildingBll.GetExamples()[0],
                     Phone = "(844) 492-9782 ext. 3",
                     IsAVCapable = false,
                     Capacity = 20,
@@ -41,7 +43,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 4,
                     Name = "Louisville 401",
-                    Building = BuildingBLL.GetExamples()[0],
+                    Building = _buildingBll.GetExamples()[0],
                     Phone = "(844) 492-9782 ext. 4",
                     IsAVCapable = true,
                     Capacity = 40,
@@ -50,7 +52,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 5,
                     Name = "Chicago 101",
-                    Building = BuildingBLL.GetExamples()[1],
+                    Building = _buildingBll.GetExamples()[1],
                     Phone = "(312) 858-1219 ext. 5",
                     IsAVCapable = false,
                     Capacity = 11,
@@ -59,7 +61,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 6,
                     Name = "Chicago 201",
-                    Building = BuildingBLL.GetExamples()[1],
+                    Building = _buildingBll.GetExamples()[1],
                     Phone = "(312) 858-1219 ext. 6",
                     IsAVCapable = true,
                     Capacity = 12,
@@ -68,7 +70,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 7,
                     Name = "Chicago 301",
-                    Building = BuildingBLL.GetExamples()[1],
+                    Building = _buildingBll.GetExamples()[1],
                     Phone = "(312) 858-1219 ext. 7",
                     IsAVCapable = false,
                     Capacity = 15,
@@ -77,7 +79,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 8,
                     Name = "Chicago 401",
-                    Building = BuildingBLL.GetExamples()[1],
+                    Building = _buildingBll.GetExamples()[1],
                     Phone = "(312) 858-1219 ext. 8",
                     IsAVCapable = true,
                     Capacity = 30,
@@ -86,7 +88,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 9,
                     Name = "Denver 101",
-                    Building = BuildingBLL.GetExamples()[2],
+                    Building = _buildingBll.GetExamples()[2],
                     Phone = "(844) 555-9782 ext. 9",
                     IsAVCapable = false,
                     Capacity = 10,
@@ -95,7 +97,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 10,
                     Name = "Denver 201",
-                    Building = BuildingBLL.GetExamples()[2],
+                    Building = _buildingBll.GetExamples()[2],
                     Phone = "(844) 555-9782 ext. 10",
                     IsAVCapable = true,
                     Capacity = 20,
@@ -104,7 +106,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 11,
                     Name = "Denver 301",
-                    Building = BuildingBLL.GetExamples()[2],
+                    Building = _buildingBll.GetExamples()[2],
                     Phone = "(844) 555-9782 ext. 11",
                     IsAVCapable = false,
                     Capacity = 25,
@@ -113,7 +115,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 12,
                     Name = "Denver 401",
-                    Building = BuildingBLL.GetExamples()[2],
+                    Building = _buildingBll.GetExamples()[2],
                     Phone = "(844) 555-9782 ext. 12",
                     IsAVCapable = true,
                     Capacity = 40,
@@ -122,7 +124,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 13,
                     Name = "Duluth 101",
-                    Building = BuildingBLL.GetExamples()[3],
+                    Building = _buildingBll.GetExamples()[3],
                     Phone = "(770) 342-0200 ext. 13",
                     IsAVCapable = false,
                     Capacity = 12,
@@ -131,7 +133,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 14,
                     Name = "Duluth 201",
-                    Building = BuildingBLL.GetExamples()[3],
+                    Building = _buildingBll.GetExamples()[3],
                     Phone = "(770) 342-0200 ext. 14",
                     IsAVCapable = true,
                     Capacity = 15,
@@ -140,7 +142,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 15,
                     Name = "Duluth 301",
-                    Building = BuildingBLL.GetExamples()[3],
+                    Building = _buildingBll.GetExamples()[3],
                     Phone = "(770) 342-0200 ext. 15",
                     IsAVCapable = false,
                     Capacity = 20,
@@ -149,7 +151,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 16,
                     Name = "Duluth 401",
-                    Building = BuildingBLL.GetExamples()[3],
+                    Building = _buildingBll.GetExamples()[3],
                     Phone = "(770) 342-0200 ext. 16",
                     IsAVCapable = true,
                     Capacity = 40,
@@ -158,7 +160,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 17,
                     Name = "Lehi 101",
-                    Building = BuildingBLL.GetExamples()[4],
+                    Building = _buildingBll.GetExamples()[4],
                     Phone = "(844) 555-2879 ext. 17",
                     IsAVCapable = false,
                     Capacity = 12,
@@ -167,7 +169,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 18,
                     Name = "Lehi 201",
-                    Building = BuildingBLL.GetExamples()[4],
+                    Building = _buildingBll.GetExamples()[4],
                     Phone = "(844) 555-2879 ext. 18",
                     IsAVCapable = true,
                     Capacity = 15,
@@ -176,7 +178,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 19,
                     Name = "Lehi 301",
-                    Building = BuildingBLL.GetExamples()[4],
+                    Building = _buildingBll.GetExamples()[4],
                     Phone = "(844) 555-2879 ext. 19",
                     IsAVCapable = false,
                     Capacity = 20,
@@ -185,7 +187,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                 {
                     Id = 20,
                     Name = "Lehi 401",
-                    Building = BuildingBLL.GetExamples()[4],
+                    Building = _buildingBll.GetExamples()[4],
                     Phone = "(844) 555-2879 ext. 20",
                     IsAVCapable = true,
                     Capacity = 40,
