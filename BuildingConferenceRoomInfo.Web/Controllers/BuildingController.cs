@@ -12,7 +12,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         // GET: Building
         public ActionResult Index()
         {
-            var buildingViewModels = Examples.Select((model) => ConvertToViewModel(model));
+            var buildingViewModels = GetExamples().Select((model) => ConvertToViewModel(model));
             return View(buildingViewModels);
         }
 
@@ -33,8 +33,9 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             };
         }
 
-        public static IList<BuildingModel> Examples { get; } =
-            new List<BuildingModel>
+        public static IList<BuildingModel> GetExamples()
+        {
+            IList<BuildingModel> examples = new List<BuildingModel>
             {
                 new BuildingModel
                 {
@@ -102,5 +103,8 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
                     ConferenceRoomCount = 4,
                 },
             };
+
+            return examples;
+        }
     }
 }
