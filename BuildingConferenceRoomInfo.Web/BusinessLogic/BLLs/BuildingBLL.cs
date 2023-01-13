@@ -8,7 +8,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
     {
         private IList<BuildingModel> _models;
 
-        public BuildingBLL()
+        public IList<BuildingModel> GetAll()
         {
             _models = new List<BuildingModel>
             {
@@ -78,10 +78,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
                     ConferenceRoomCount = 4,
                 },
             };
-        }
 
-        public IList<BuildingModel> GetAll()
-        {
             return _models;
         }
     }

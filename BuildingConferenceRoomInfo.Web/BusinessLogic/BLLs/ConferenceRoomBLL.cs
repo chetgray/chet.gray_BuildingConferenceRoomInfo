@@ -9,7 +9,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
         private readonly BuildingBLL _buildingBll = new BuildingBLL();
         private IList<ConferenceRoomModel> _models;
 
-        public ConferenceRoomBLL()
+        public IList<ConferenceRoomModel> GetAll()
         {
             _models = new List<ConferenceRoomModel>
             {
@@ -194,11 +194,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
                     Capacity = 40,
                 },
             };
-            ;
-        }
 
-        public IList<ConferenceRoomModel> GetAll()
-        {
             return _models;
         }
     }
