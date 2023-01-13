@@ -2,7 +2,7 @@
 
 using BuildingConferenceRoomInfo.Web.Models;
 
-namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
+namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
 {
     internal class BuildingBLL
     {

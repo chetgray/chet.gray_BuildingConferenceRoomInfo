@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 
-using BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs;
+using BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs;
 using BuildingConferenceRoomInfo.Web.Models;
 using BuildingConferenceRoomInfo.Web.ViewModels;
 
