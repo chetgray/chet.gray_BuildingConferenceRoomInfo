@@ -15,12 +15,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         public ActionResult Index()
         {
             IEnumerable<BuildingModel> models = _bll.GetExamples();
-            IList<BuildingViewModel> viewModels = new List<BuildingViewModel>();
-
-            foreach (BuildingModel model in models)
-            {
-                viewModels.Add(ConvertToViewModel(model));
-            }
+            IEnumerable<BuildingViewModel> viewModels = ConvertManyToViewModels(models);
 
             return View(viewModels);
         }
@@ -40,6 +35,20 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
                 FloorCount = model.FloorCount,
                 ConferenceRoomCount = model.ConferenceRoomCount,
             };
+        }
+
+        public IEnumerable<BuildingViewModel> ConvertManyToViewModels(
+            IEnumerable<BuildingModel> models
+        )
+        {
+            ICollection<BuildingViewModel> viewModels = new List<BuildingViewModel>();
+
+            foreach (BuildingModel model in models)
+            {
+                viewModels.Add(ConvertToViewModel(model));
+            }
+
+            return viewModels;
         }
     }
 }

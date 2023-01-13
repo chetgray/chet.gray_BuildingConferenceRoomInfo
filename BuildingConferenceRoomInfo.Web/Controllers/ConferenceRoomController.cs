@@ -16,12 +16,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         public ActionResult Index()
         {
             IEnumerable<ConferenceRoomModel> models = _bll.GetExamples();
-            IList<ConferenceRoomViewModel> viewModels = new List<ConferenceRoomViewModel>();
-
-            foreach (ConferenceRoomModel model in models)
-            {
-                viewModels.Add(ConvertToViewModel(model));
-            }
+            IEnumerable<ConferenceRoomViewModel> viewModels = ConvertManyToViewModels(models);
 
             return View(viewModels);
         }
@@ -37,6 +32,21 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
                 IsAVCapable = model.IsAVCapable,
                 Capacity = model.Capacity,
             };
+        }
+
+        public IEnumerable<ConferenceRoomViewModel> ConvertManyToViewModels(
+            IEnumerable<ConferenceRoomModel> models
+        )
+        {
+            ICollection<ConferenceRoomViewModel> viewModels =
+                new List<ConferenceRoomViewModel>();
+
+            foreach (ConferenceRoomModel model in models)
+            {
+                viewModels.Add(ConvertToViewModel(model));
+            }
+
+            return viewModels;
         }
     }
 }
