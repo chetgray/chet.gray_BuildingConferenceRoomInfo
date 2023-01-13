@@ -20,9 +20,8 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         // GET: Building/List
         public ActionResult List()
         {
-            List<BuildingModel> models = (List<BuildingModel>)_bll.GetAll();
-            List<BuildingViewModel> viewModels =
-                (List<BuildingViewModel>)ConvertManyToViewModels(models);
+            List<BuildingModel> models = _bll.GetAll();
+            List<BuildingViewModel> viewModels = ConvertManyToViewModels(models);
 
             return View(viewModels);
         }
@@ -46,9 +45,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         }
 
         [NonAction]
-        public IEnumerable<BuildingViewModel> ConvertManyToViewModels(
-            IEnumerable<BuildingModel> models
-        )
+        public List<BuildingViewModel> ConvertManyToViewModels(List<BuildingModel> models)
         {
             List<BuildingViewModel> viewModels = new List<BuildingViewModel>();
 

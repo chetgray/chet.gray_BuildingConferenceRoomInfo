@@ -6,9 +6,9 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
 {
     internal class BuildingBLL
     {
-        private IList<BuildingModel> _models;
+        private List<BuildingModel> _models;
 
-        public IList<BuildingModel> GetAll()
+        public List<BuildingModel> GetAll()
         {
             _models = new List<BuildingModel>
             {
