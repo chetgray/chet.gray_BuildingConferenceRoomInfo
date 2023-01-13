@@ -6,9 +6,11 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
 {
     internal class BuildingBLL
     {
-        public IList<BuildingModel> GetExamples()
+        private IList<BuildingModel> _models;
+
+        public BuildingBLL()
         {
-            IList<BuildingModel> examples = new List<BuildingModel>
+            _models = new List<BuildingModel>
             {
                 new BuildingModel
                 {
@@ -76,8 +78,11 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLayer.BLLs
                     ConferenceRoomCount = 4,
                 },
             };
+        }
 
-            return examples;
+        public IList<BuildingModel> GetAll()
+        {
+            return _models;
         }
     }
 }

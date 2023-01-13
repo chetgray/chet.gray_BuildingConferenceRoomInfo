@@ -20,7 +20,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         // GET: Building/List
         public ActionResult List()
         {
-            IEnumerable<BuildingModel> models = _bll.GetExamples();
+            IEnumerable<BuildingModel> models = _bll.GetAll();
             IEnumerable<BuildingViewModel> viewModels = ConvertManyToViewModels(models);
 
             return View(viewModels);
