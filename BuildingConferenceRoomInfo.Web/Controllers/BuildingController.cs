@@ -26,6 +26,12 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             return View(viewModels);
         }
 
+        // GET: Building/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
         private BuildingViewModel ConvertToViewModel(BuildingModel model)
         {
             return new BuildingViewModel

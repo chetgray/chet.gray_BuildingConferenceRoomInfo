@@ -8,7 +8,7 @@ Information" Site to add Data Entry
 > Update your "Building and Conference Room Information" application (US
 > 211908) to add new data entry pages:
 >
-> - [ ] One page will allow the user to "Enter New Building
+> - [x] One page will allow the user to "Enter New Building
 >   Information." It should allow the user to enter all the building
 >   fields.
 > - [ ] One page will allow the user to "Enter New Conference Room
