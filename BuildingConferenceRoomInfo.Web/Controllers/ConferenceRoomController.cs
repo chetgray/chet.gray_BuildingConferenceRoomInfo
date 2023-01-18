@@ -33,6 +33,12 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             return View();
         }
 
+        // GET: ConferenceRoom/Details
+        public ActionResult Details(ConferenceRoomViewModel viewModel)
+        {
+            return View(viewModel);
+        }
+
         private ConferenceRoomViewModel ConvertToViewModel(ConferenceRoomModel model)
         {
             return new ConferenceRoomViewModel

@@ -1,0 +1,61 @@
+﻿@model BuildingConferenceRoomInfo.Web.ViewModels.ConferenceRoomViewModel
+@{
+    ViewBag.Title = "Conference Room Details";
+}
+
+<div class="container">
+    <header class="page-header">
+        <h2>
+            <img class="img-circle"
+                 src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                 width="98" height="98" />
+            @ViewBag.Title
+        </h2>
+    </header>
+    @if (Request.Params?["IsNew"] == "true")
+    {
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button class="close" data-dismiss="alert" type="button" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            <span class="sr-only">Success:</span>
+            Conference Room Information Entry Successful!
+        </div>
+    }
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildingName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuildingName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsAVCapable)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsAVCapable)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Capacity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Capacity)
+        </dd>
+    </dl>
+    <p>
+        @Html.ActionLink("« Back to List", "List")
+    </p>
+</div>
