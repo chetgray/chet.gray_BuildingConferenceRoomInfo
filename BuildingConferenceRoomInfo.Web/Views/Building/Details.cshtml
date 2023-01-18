@@ -12,6 +12,14 @@
             @ViewBag.Title
         </h2>
     </header>
+    @if (Request.Params?["IsNew"] == "true")
+    {
+        <div class="alert alert-success" role="alert">
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            <span class="sr-only">Success:</span>
+            Building Information Entry Successful!
+        </div>
+    }
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Name)

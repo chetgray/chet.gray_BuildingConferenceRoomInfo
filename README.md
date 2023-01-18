@@ -16,7 +16,7 @@ Information" Site to add Data Entry
 >   room fields.
 > - [x] These 2 data entry pages should each have a link from the
 >   Welcome page.
-> - [ ] Upon submission of the "Enter New Building Information" page,
+> - [x] Upon submission of the "Enter New Building Information" page,
 >   take the user to a new page where you'll simply display "Building
 >   Information Entry Successful!"
 > - [ ] Upon submission of the "Enter New Conference Room Information"
