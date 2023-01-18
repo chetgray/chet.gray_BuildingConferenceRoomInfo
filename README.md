@@ -14,7 +14,7 @@ Information" Site to add Data Entry
 > - [x] One page will allow the user to "Enter New Conference Room
 >   Information." It should allow the user to enter all the conference
 >   room fields.
-> - [ ] These 2 data entry pages should each have a link from the
+> - [x] These 2 data entry pages should each have a link from the
 >   Welcome page.
 > - [ ] Upon submission of the "Enter New Building Information" page,
 >   take the user to a new page where you'll simply display "Building
