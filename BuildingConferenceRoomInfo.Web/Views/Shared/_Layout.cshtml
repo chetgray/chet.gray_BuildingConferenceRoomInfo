@@ -30,8 +30,20 @@
                             Buildings <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("View all", "List", "Building")</li>
-                            <li>@Html.ActionLink("Add new", "Create", "Building")</li>
+                            <li>
+                                <a href="@Url.Action("List", "Building")">
+                                    <span class="glyphicon glyphicon-list"
+                                          aria-hidden="true"></span>
+                                    View all
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Create", "Building")">
+                                    <span class="glyphicon glyphicon-plus"
+                                          aria-hidden="true"></span>
+                                    Add new
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -40,8 +52,20 @@
                             Conference Rooms <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("View all", "List", "ConferenceRoom")</li>
-                            <li>@Html.ActionLink("Add new", "Create", "ConferenceRoom")</li>
+                            <li>
+                                <a href="@Url.Action("List", "ConferenceRoom")">
+                                    <span class="glyphicon glyphicon-list"
+                                          aria-hidden="true"></span>
+                                    View all
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Create", "ConferenceRoom")">
+                                    <span class="glyphicon glyphicon-plus"
+                                          aria-hidden="true"></span>
+                                    Add new
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
