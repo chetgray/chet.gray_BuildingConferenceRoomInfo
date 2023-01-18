@@ -1,6 +1,36 @@
 BuildingConferenceRoomInfo
 ==========================
 
+User Story #211910: MVC: Update "Building and Conference Room
+Information" Site to add better routing
+---------------------------------------
+
+> Update your "Building and Conference Room Information" application (US
+> 211908 and 211909) to:
+>
+> - [ ] For each of your new data entry pages, instead of routing to a
+>   new page, route back to the same page.
+> - [ ] Add validation to the "Enter New Building Information" page as
+>   follows:
+>   - [ ] The user must enter all fields.
+> - [ ] Add validation to the "Enter New Conference Room Information"
+>   page as follows:
+>   - [ ] The user must enter all fields.
+> - [ ] On each page, after the user submits the form, take them back to
+>   the same page.
+> - [ ] If the entry was successful - i.e. they entered all the needed
+>   fields - send a message stating so.
+>   - [ ] The message should include the Building Name and City for the
+>     "Enter New Building Information" page.
+>   - [ ] The message should include the Room Name and Room Building for
+>     the "Enter New Conference Room Information" page.
+> - [ ] If the entry was not successful - i.e. the user did not enter
+>   all the required fields - send a message stating so.
+>   - [ ] The message should list the required fields.
+>     - [ ] Bonus points if you can list ONLY the fields that had a
+>       problem!
+> - [ ] Be sure to use a domain model and multiple View Models!
+
 User Story #211909: MVC: Update "Building and Conference Room
 Information" Site to add Data Entry
 -----------------------------------
@@ -22,7 +52,7 @@ Information" Site to add Data Entry
 > - [x] Upon submission of the "Enter New Conference Room Information"
 >   page, take the user to a new page where you'll simply display
 >   "Conference Room Information Entry Successful!"
-> - [ ] Don't worry about validation for now (don't worry -we will
+> - [x] Don't worry about validation for now (don't worry -we will
 >   later!)
 
 User Story #211908: MVC: Building and Conference Room Information Site
