@@ -25,8 +25,9 @@
             <h2>Buildings</h2>
             <p>Addresses, contact info, layouts, &hellip;</p>
             <p>
-                @Html.ActionLink("View info »", "List", "Building", new { },
-                     new { @class = "btn btn-default" })
+                <a class="btn btn-primary" href="@Url.Action("List", "Building")">
+                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> View all
+                </a>
             </p>
         </div>
         <div class="col-sm-6 text-center">
@@ -36,8 +37,9 @@
             <h2>Conference Rooms</h2>
             <p>Locations, A/V capabilities, capacities, &hellip;</p>
             <p>
-                @Html.ActionLink("View info »", "List", "ConferenceRoom", new { },
-                     new { @class = "btn btn-default" })
+                <a class="btn btn-primary" href="@Url.Action("List", "ConferenceRoom")">
+                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> View all
+                </a>
             </p>
         </div>
     </div>
