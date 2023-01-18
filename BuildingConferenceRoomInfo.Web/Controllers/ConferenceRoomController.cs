@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using System.Web.Routing;
 
 using BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs;
 using BuildingConferenceRoomInfo.Web.Models;
@@ -31,6 +32,24 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         public ActionResult Create()
         {
             return View();
+        }
+
+        // POST: ConferenceRoom/Create
+        [HttpPost]
+        public ActionResult Create(ConferenceRoomViewModel viewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(viewModel);
+            }
+            //ConferenceRoomModel model = ConvertToModel(viewModel);
+            //_bll.Create(model);
+
+            RouteValueDictionary routeValues = new RouteValueDictionary(viewModel)
+            {
+                { "IsNew", true }
+            };
+            return RedirectToAction("Details", routeValues);
         }
 
         // GET: ConferenceRoom/Details

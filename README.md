@@ -19,7 +19,7 @@ Information" Site to add Data Entry
 > - [x] Upon submission of the "Enter New Building Information" page,
 >   take the user to a new page where you'll simply display "Building
 >   Information Entry Successful!"
-> - [ ] Upon submission of the "Enter New Conference Room Information"
+> - [x] Upon submission of the "Enter New Conference Room Information"
 >   page, take the user to a new page where you'll simply display
 >   "Conference Room Information Entry Successful!"
 > - [ ] Don't worry about validation for now (don't worry -we will
