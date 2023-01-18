@@ -1,0 +1,74 @@
+﻿@model BuildingConferenceRoomInfo.Web.ViewModels.BuildingViewModel
+@{
+    ViewBag.Title = "Building Details";
+}
+
+<div class="container">
+    <header class="page-header">
+        <h2>
+            <img class="img-circle"
+                 src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+                 width="98" height="98" />
+            @ViewBag.Title
+        </h2>
+    </header>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressStreet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AddressStreet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressCity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AddressCity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressState)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AddressState)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressZip)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AddressZip)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AddressCountry)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AddressCountry)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MainPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MainPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FloorCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FloorCount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ConferenceRoomCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ConferenceRoomCount)
+        </dd>
+    </dl>
+    <p>
+        @Html.ActionLink("« Back to List", "List")
+    </p>
+</div>
