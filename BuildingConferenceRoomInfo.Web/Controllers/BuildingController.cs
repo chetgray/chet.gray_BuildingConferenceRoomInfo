@@ -32,6 +32,20 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             return View();
         }
 
+        // POST: Building/Create
+        [HttpPost]
+        public ActionResult Create(BuildingViewModel viewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(viewModel);
+            }
+            //BuildingModel model = ConvertToModel(viewModel);
+            //_bll.Create(model);
+
+            return RedirectToAction("Details", viewModel);
+        }
+
         // GET: Building/Details
         public ActionResult Details(BuildingViewModel viewModel)
         {
