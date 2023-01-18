@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using System.Web.Routing;
 
 using BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs;
 using BuildingConferenceRoomInfo.Web.Models;
@@ -44,11 +43,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             //BuildingModel model = ConvertToModel(viewModel);
             //_bll.Create(model);
 
-            RouteValueDictionary routeValues = new RouteValueDictionary(viewModel)
-            {
-                { "IsNew", true }
-            };
-            return RedirectToAction("Details", routeValues);
+            return View("Details", viewModel);
         }
 
         // GET: Building/Details
