@@ -80,22 +80,5 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
 
             return viewModels;
         }
-
-        private BuildingModel ConvertToModel(BuildingViewModel viewModel)
-        {
-            return new BuildingModel
-            {
-                Id = viewModel.Id,
-                Name = viewModel.Name,
-                AddressStreet = viewModel.AddressStreet,
-                AddressCity = viewModel.AddressCity,
-                AddressState = viewModel.AddressState,
-                AddressZip = viewModel.AddressZip,
-                AddressCountry = viewModel.AddressCountry,
-                MainPhone = viewModel.MainPhone,
-                FloorCount = viewModel.FloorCount,
-                ConferenceRoomCount = viewModel.ConferenceRoomCount,
-            };
-        }
     }
 }
