@@ -9,8 +9,8 @@
     padding-right: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
+/* Override the default bootstrap behavior where horizontal description lists
+   will truncate terms that are too long to fit in the left column
 */
 .dl-horizontal dt {
     white-space: normal;
@@ -26,5 +26,21 @@ textarea {
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
     background-color: #777;
-    border-color: #fff
+    border-color: #fff;
+}
+
+/* Larger single checkboxes (with .form-control and .control-label) */
+.checkbox input[type="checkbox"].form-control {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.checkbox .control-label {
+    display: inline-block;
+    font-weight: 700;
+    text-align: left;
+    vertical-align: middle;
 }
