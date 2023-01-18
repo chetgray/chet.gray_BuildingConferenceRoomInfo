@@ -12,20 +12,62 @@
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button class="navbar-toggle" data-target=".navbar-collapse"
+                <button class="navbar-toggle" data-target=".navbar-collapse#site-navbar"
                         data-toggle="collapse" type="button" title="more options">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Building and Conference Room Info", "Index", "Home",
-                new { area = "" }, new { @class = "navbar-brand" })
+                    new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" id="site-navbar">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Buildings", "List", "Building")</li>
-                    <li>@Html.ActionLink("Conference Rooms", "List", "ConferenceRoom")</li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false" href="#">
+                            Buildings <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="@Url.Action("List", "Building")">
+                                    <span class="glyphicon glyphicon-list"
+                                          aria-hidden="true"></span>
+                                    View all
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Create", "Building")">
+                                    <span class="glyphicon glyphicon-plus"
+                                          aria-hidden="true"></span>
+                                    Add new
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true" aria-expanded="false" href="#">
+                            Conference Rooms <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="@Url.Action("List", "ConferenceRoom")">
+                                    <span class="glyphicon glyphicon-list"
+                                          aria-hidden="true"></span>
+                                    View all
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Create", "ConferenceRoom")">
+                                    <span class="glyphicon glyphicon-plus"
+                                          aria-hidden="true"></span>
+                                    Add new
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>

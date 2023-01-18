@@ -1,6 +1,30 @@
 BuildingConferenceRoomInfo
 ==========================
 
+User Story #211909: MVC: Update "Building and Conference Room
+Information" Site to add Data Entry
+-----------------------------------
+
+> Update your "Building and Conference Room Information" application (US
+> 211908) to add new data entry pages:
+>
+> - [x] One page will allow the user to "Enter New Building
+>   Information." It should allow the user to enter all the building
+>   fields.
+> - [x] One page will allow the user to "Enter New Conference Room
+>   Information." It should allow the user to enter all the conference
+>   room fields.
+> - [x] These 2 data entry pages should each have a link from the
+>   Welcome page.
+> - [x] Upon submission of the "Enter New Building Information" page,
+>   take the user to a new page where you'll simply display "Building
+>   Information Entry Successful!"
+> - [x] Upon submission of the "Enter New Conference Room Information"
+>   page, take the user to a new page where you'll simply display
+>   "Conference Room Information Entry Successful!"
+> - [ ] Don't worry about validation for now (don't worry -we will
+>   later!)
+
 User Story #211908: MVC: Building and Conference Room Information Site
 ----------------------------------------------------------------------
 

@@ -27,6 +27,32 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             return View(viewModels);
         }
 
+        // GET: ConferenceRoom/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: ConferenceRoom/Create
+        [HttpPost]
+        public ActionResult Create(ConferenceRoomViewModel viewModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(viewModel);
+            }
+            //ConferenceRoomModel model = ConvertToModel(viewModel);
+            //_bll.Create(model);
+
+            return View("Details", viewModel);
+        }
+
+        // GET: ConferenceRoom/Details
+        public ActionResult Details(ConferenceRoomViewModel viewModel)
+        {
+            return View(viewModel);
+        }
+
         private ConferenceRoomViewModel ConvertToViewModel(ConferenceRoomModel model)
         {
             return new ConferenceRoomViewModel
