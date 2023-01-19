@@ -8,7 +8,7 @@ Information" Site to add better routing
 > Update your "Building and Conference Room Information" application (US
 > 211908 and 211909) to:
 >
-> - [ ] For each of your new data entry pages, instead of routing to a
+> - [x] For each of your new data entry pages, instead of routing to a
 >   new page, route back to the same page.
 > - [ ] Add validation to the "Enter New Building Information" page as
 >   follows:
@@ -16,13 +16,13 @@ Information" Site to add better routing
 > - [ ] Add validation to the "Enter New Conference Room Information"
 >   page as follows:
 >   - [ ] The user must enter all fields.
-> - [ ] On each page, after the user submits the form, take them back to
+> - [x] On each page, after the user submits the form, take them back to
 >   the same page.
-> - [ ] If the entry was successful - i.e. they entered all the needed
+> - [x] If the entry was successful - i.e. they entered all the needed
 >   fields - send a message stating so.
->   - [ ] The message should include the Building Name and City for the
+>   - [x] The message should include the Building Name and City for the
 >     "Enter New Building Information" page.
->   - [ ] The message should include the Room Name and Room Building for
+>   - [x] The message should include the Room Name and Room Building for
 >     the "Enter New Conference Room Information" page.
 > - [ ] If the entry was not successful - i.e. the user did not enter
 >   all the required fields - send a message stating so.
