@@ -10,12 +10,12 @@ Information" Site to add better routing
 >
 > - [x] For each of your new data entry pages, instead of routing to a
 >   new page, route back to the same page.
-> - [ ] Add validation to the "Enter New Building Information" page as
+> - [x] Add validation to the "Enter New Building Information" page as
 >   follows:
->   - [ ] The user must enter all fields.
-> - [ ] Add validation to the "Enter New Conference Room Information"
+>   - [x] The user must enter all fields.
+> - [x] Add validation to the "Enter New Conference Room Information"
 >   page as follows:
->   - [ ] The user must enter all fields.
+>   - [x] The user must enter all fields.
 > - [x] On each page, after the user submits the form, take them back to
 >   the same page.
 > - [x] If the entry was successful - i.e. they entered all the needed
