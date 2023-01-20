@@ -24,10 +24,10 @@ Information" Site to add better routing
 >     "Enter New Building Information" page.
 >   - [x] The message should include the Room Name and Room Building for
 >     the "Enter New Conference Room Information" page.
-> - [ ] If the entry was not successful - i.e. the user did not enter
+> - [x] If the entry was not successful - i.e. the user did not enter
 >   all the required fields - send a message stating so.
->   - [ ] The message should list the required fields.
->     - [ ] Bonus points if you can list ONLY the fields that had a
+>   - [x] The message should list the required fields.
+>     - [x] Bonus points if you can list ONLY the fields that had a
 >       problem!
 > - [x] Be sure to use a domain model and multiple View Models!
 
