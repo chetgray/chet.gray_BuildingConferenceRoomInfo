@@ -34,8 +34,13 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
 
         // POST: Building/Create
         [HttpPost]
-        public ActionResult Create(BuildingViewModel viewModel)
+        public ActionResult Create(BuildingCreatorViewModel viewModel)
         {
+            viewModel.IsSuccess = false;
+            if (ModelState.IsValid)
+            {
+                viewModel.IsSuccess = true;
+            }
             //BuildingModel model = ConvertToModel(viewModel);
             //_bll.Create(model);
 

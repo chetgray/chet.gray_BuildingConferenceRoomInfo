@@ -29,7 +29,7 @@ Information" Site to add better routing
 >   - [ ] The message should list the required fields.
 >     - [ ] Bonus points if you can list ONLY the fields that had a
 >       problem!
-> - [ ] Be sure to use a domain model and multiple View Models!
+> - [x] Be sure to use a domain model and multiple View Models!
 
 User Story #211909: MVC: Update "Building and Conference Room
 Information" Site to add Data Entry
