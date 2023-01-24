@@ -42,10 +42,15 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
 
             if (ModelState.IsValid)
             {
-                viewModel.AlertContext = BootstrapContext.Success;
-                viewModel.AlertMessage =
+                string successMessage =
                     $"Conference room information entry successful for {viewModel.Name} in "
                     + $"{viewModel.BuildingName}!";
+                ModelState.Clear();
+                viewModel = new ConferenceRoomCreatorViewModel
+                {
+                    AlertContext = BootstrapContext.Success,
+                    AlertMessage = successMessage
+                };
             }
             //ConferenceRoomModel model = ConvertToModel(viewModel);
             //_bll.Create(model);

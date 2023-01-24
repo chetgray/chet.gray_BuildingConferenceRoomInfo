@@ -35,10 +35,10 @@ namespace BuildingConferenceRoomInfo.Web.ViewModels
 
         [Required]
         [Display(Name = "Number of Floors")]
-        public int FloorCount { get; set; }
+        public int? FloorCount { get; set; }
 
         [Required]
         [Display(Name = "Number of Conference Rooms")]
-        public int ConferenceRoomCount { get; set; }
+        public int? ConferenceRoomCount { get; set; }
     }
 }
