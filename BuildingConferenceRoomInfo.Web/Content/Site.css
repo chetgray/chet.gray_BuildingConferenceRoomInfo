@@ -44,3 +44,7 @@ textarea {
     text-align: left;
     vertical-align: middle;
 }
+
+.validation-summary-valid {
+    display: none;
+}

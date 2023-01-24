@@ -35,16 +35,17 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
 
         // POST: ConferenceRoom/Create
         [HttpPost]
-        public ActionResult Create(ConferenceRoomViewModel viewModel)
+        public ActionResult Create(ConferenceRoomCreatorViewModel viewModel)
         {
-            if (!ModelState.IsValid)
+            viewModel.IsSuccess = false;
+            if (ModelState.IsValid)
             {
-                return View(viewModel);
+                viewModel.IsSuccess = true;
             }
             //ConferenceRoomModel model = ConvertToModel(viewModel);
             //_bll.Create(model);
 
-            return View("Details", viewModel);
+            return View(viewModel);
         }
 
         // GET: ConferenceRoom/Details

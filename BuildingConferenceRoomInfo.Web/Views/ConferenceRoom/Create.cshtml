@@ -1,4 +1,4 @@
-﻿@model BuildingConferenceRoomInfo.Web.ViewModels.ConferenceRoomViewModel
+﻿@model BuildingConferenceRoomInfo.Web.ViewModels.ConferenceRoomCreatorViewModel
 @{
     ViewBag.Title = "Enter New Conference Room Information";
 }
@@ -12,12 +12,23 @@
             @ViewBag.Title
         </h2>
     </header>
-    @using (Html.BeginForm("Create", "ConferenceRoom", new { Success = true }, FormMethod.Post))
+    @if (Model?.IsSuccess == true)
+    {
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button class="close" data-dismiss="alert" type="button" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            <span class="sr-only">Success:</span>
+            Conference room information entry successful for @Model.Name in @Model.BuildingName!
+        </div>
+    }
+    @using (Html.BeginForm("Create", "ConferenceRoom", FormMethod.Post))
     {
         @Html.AntiForgeryToken()
         <fieldset class="form-horizontal">
             <legend>New Conference Room</legend>
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.ValidationSummary(false, "", new { @class = "alert alert-danger" })
             <div class="form-group">
                 @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-sm-2" })
                 <div class="col-sm-10">
