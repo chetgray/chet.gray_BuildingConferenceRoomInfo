@@ -37,10 +37,15 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         [HttpPost]
         public ActionResult Create(ConferenceRoomCreatorViewModel viewModel)
         {
-            viewModel.IsSuccess = false;
+            viewModel.AlertContext = null;
+            viewModel.AlertMessage = "";
+
             if (ModelState.IsValid)
             {
-                viewModel.IsSuccess = true;
+                viewModel.AlertContext = BootstrapContext.Success;
+                viewModel.AlertMessage =
+                    $"Conference room information entry successful for {viewModel.Name} in "
+                    + $"{viewModel.BuildingName}!";
             }
             //ConferenceRoomModel model = ConvertToModel(viewModel);
             //_bll.Create(model);
