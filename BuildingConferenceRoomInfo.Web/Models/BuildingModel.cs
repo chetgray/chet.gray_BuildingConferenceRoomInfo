@@ -10,7 +10,7 @@
         public string AddressZip { get; set; }
         public string AddressCountry { get; set; }
         public string MainPhone { get; set; }
-        public int FloorCount { get; set; }
-        public int ConferenceRoomCount { get; set; }
+        public int? FloorCount { get; set; }
+        public int? ConferenceRoomCount { get; set; }
     }
 }
