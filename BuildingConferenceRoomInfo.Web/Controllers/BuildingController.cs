@@ -39,6 +39,8 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             viewModel.IsSuccess = false;
             if (ModelState.IsValid)
             {
+                BuildingModel model = ConvertToModel(viewModel);
+                BuildingClassification classification = _bll.GetClassification(model);
                 viewModel.IsSuccess = true;
             }
             //BuildingModel model = ConvertToModel(viewModel);
@@ -80,6 +82,22 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             }
 
             return viewModels;
+        }
+
+        private BuildingModel ConvertToModel(BuildingCreatorViewModel viewModel)
+        {
+            return new BuildingModel
+            {
+                Name = viewModel.Name,
+                AddressStreet = viewModel.AddressStreet,
+                AddressCity = viewModel.AddressCity,
+                AddressState = viewModel.AddressState,
+                AddressZip = viewModel.AddressZip,
+                AddressCountry = viewModel.AddressCountry,
+                MainPhone = viewModel.MainPhone,
+                FloorCount = viewModel.FloorCount,
+                ConferenceRoomCount = viewModel.ConferenceRoomCount,
+            };
         }
     }
 }

@@ -14,11 +14,11 @@ Information" Site to add Business Logic
 >   standard or a tower (we can call this our building type). Show both
 >   of these determinations in the success message on the data entry
 >   page.
->   - [ ] After the user enters building information, call a Business
+>   - [x] After the user enters building information, call a Business
 >     Logic method to determine whether it's a campus or a satellite
 >     office. Here are the requirements:
->     - [ ] A campus is located in Louisville.
->     - [ ] A satellite office is located anywhere else.
+>     - [x] A campus is located in Louisville.
+>     - [x] A satellite office is located anywhere else.
 >   - [ ] Also call a Business Logic method to determine whether the
 >     building is standard or a tower. Here are the requirements:
 >     - [ ] A building with more than 5 floors is considered a tower.
