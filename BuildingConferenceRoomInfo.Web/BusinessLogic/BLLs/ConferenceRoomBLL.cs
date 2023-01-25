@@ -18,15 +18,15 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
 
         public ConferenceRoomSize? GetSize(ConferenceRoomModel model)
         {
-            if (21 <= model.Capacity)
+            if (model.Capacity >= 21)
             {
                 return ConferenceRoomSize.Large;
             }
-            else if (11 <= model.Capacity)
+            else if (model.Capacity >= 11)
             {
                 return ConferenceRoomSize.Medium;
             }
-            else if (1 <= model.Capacity)
+            else if (model.Capacity >= 1)
             {
                 return ConferenceRoomSize.Small;
             }
