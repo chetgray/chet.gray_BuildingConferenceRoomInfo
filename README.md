@@ -8,7 +8,7 @@ Information" Site to add Business Logic
 > Update your "Building and Conference Room Information" application (US
 > 211908, 211909, 211910) to:
 >
-> - [ ] For Buildings, we want to know if the building is considered a
+> - [x] For Buildings, we want to know if the building is considered a
 >   campus or a satellite office (let's call this the building
 >   classification). We also want to know if the building is considered
 >   standard or a tower (we can call this our building type). Show both
