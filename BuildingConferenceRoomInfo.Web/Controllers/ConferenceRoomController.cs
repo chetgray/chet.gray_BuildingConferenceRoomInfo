@@ -70,7 +70,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             {
                 Id = model.Id,
                 Name = model.Name,
-                BuildingName = model.Building.Name,
+                BuildingName = model.BuildingName,
                 Phone = model.Phone,
                 IsAVCapable = model.IsAVCapable,
                 Capacity = model.Capacity,
