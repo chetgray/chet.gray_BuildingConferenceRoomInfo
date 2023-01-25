@@ -16,7 +16,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
         private readonly BuildingBLL _buildingBll = new BuildingBLL();
         private List<ConferenceRoomModel> _models;
 
-        public ConferenceRoomSize GetSize(ConferenceRoomModel model)
+        public ConferenceRoomSize? GetSize(ConferenceRoomModel model)
         {
             if (21 <= model.Capacity)
             {
@@ -26,9 +26,13 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
             {
                 return ConferenceRoomSize.Medium;
             }
-            else
+            else if (1 <= model.Capacity)
             {
                 return ConferenceRoomSize.Small;
+            }
+            else
+            {
+                return null;
             }
         }
 

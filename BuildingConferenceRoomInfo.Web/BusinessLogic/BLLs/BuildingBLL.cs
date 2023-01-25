@@ -39,15 +39,19 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
             }
         }
 
-        public BuildingType GetType(BuildingModel model)
+        public BuildingType? GetType(BuildingModel model)
         {
             if (6 <= model.FloorCount)
             {
                 return BuildingType.Tower;
             }
-            else
+            else if (1 <= model.FloorCount)
             {
                 return BuildingType.Standard;
+            }
+            else
+            {
+                return null;
             }
         }
 

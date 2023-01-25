@@ -43,10 +43,11 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             if (ModelState.IsValid)
             {
                 ConferenceRoomModel model = ConvertToModel(viewModel);
-                ConferenceRoomSize size = _bll.GetSize(model);
+                ConferenceRoomSize? size = _bll.GetSize(model);
                 string successMessage =
                     $"Conference room information entry successful for {viewModel.Name} in "
-                    + $"{viewModel.BuildingName}! This is a {size} conference room.";
+                    + $"{viewModel.BuildingName}! This is a "
+                    + $"{size?.ToString() ?? "undetermined size"} conference room.";
                 ModelState.Clear();
                 viewModel = new ConferenceRoomCreatorViewModel
                 {
