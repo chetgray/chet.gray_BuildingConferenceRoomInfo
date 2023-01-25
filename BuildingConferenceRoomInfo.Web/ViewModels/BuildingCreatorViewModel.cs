@@ -2,6 +2,7 @@
 {
     public class BuildingCreatorViewModel : BuildingViewModel
     {
-        public bool IsSuccess { get; set; }
+        public BootstrapContext? AlertContext { get; set; }
+        public string AlertMessage { get; set; }
     }
 }
