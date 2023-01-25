@@ -28,10 +28,10 @@ Information" Site to add Business Logic
 >   - [ ] After a user enters conference room information, call a
 >     Business Logic method to determine the room size. Show the size
 >     along with the success message on the data entry page.
->   - [ ] Here are the requirements:
->     - [ ] Small: 10 or fewer people capacity
->     - [ ] Medium: Between 11 and 20 people capacity
->     - [ ] Large: More than 20 people capacity
+>   - [x] Here are the requirements:
+>     - [x] Small: 10 or fewer people capacity
+>     - [x] Medium: Between 11 and 20 people capacity
+>     - [x] Large: More than 20 people capacity
 
 User Story #211910: MVC: Update "Building and Conference Room
 Information" Site to add better routing

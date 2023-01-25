@@ -4,10 +4,33 @@ using BuildingConferenceRoomInfo.Web.Models;
 
 namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
 {
+    public enum ConferenceRoomSize
+    {
+        Small = 1,
+        Medium,
+        Large
+    }
+
     internal class ConferenceRoomBLL
     {
         private readonly BuildingBLL _buildingBll = new BuildingBLL();
         private List<ConferenceRoomModel> _models;
+
+        public ConferenceRoomSize GetSize(ConferenceRoomModel model)
+        {
+            if (20 < model.Capacity)
+            {
+                return ConferenceRoomSize.Large;
+            }
+            else if (10 < model.Capacity)
+            {
+                return ConferenceRoomSize.Medium;
+            }
+            else
+            {
+                return ConferenceRoomSize.Small;
+            }
+        }
 
         public List<ConferenceRoomModel> GetAll()
         {
