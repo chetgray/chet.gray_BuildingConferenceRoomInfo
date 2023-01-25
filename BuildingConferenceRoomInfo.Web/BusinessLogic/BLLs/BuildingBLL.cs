@@ -41,7 +41,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
 
         public BuildingType GetType(BuildingModel model)
         {
-            if (5 < model.FloorCount)
+            if (6 <= model.FloorCount)
             {
                 return BuildingType.Tower;
             }
