@@ -23,9 +23,9 @@ Information" Site to add Business Logic
 >     building is standard or a tower. Here are the requirements:
 >     - [x] A building with more than 5 floors is considered a tower.
 >     - [x] A building with 5 or fewer floors is considered standard.
-> - [ ] For Conference Rooms, we want to know if a newly added room is
+> - [x] For Conference Rooms, we want to know if a newly added room is
 >   considered small, medium, or large.
->   - [ ] After a user enters conference room information, call a
+>   - [x] After a user enters conference room information, call a
 >     Business Logic method to determine the room size. Show the size
 >     along with the success message on the data entry page.
 >   - [x] Here are the requirements:

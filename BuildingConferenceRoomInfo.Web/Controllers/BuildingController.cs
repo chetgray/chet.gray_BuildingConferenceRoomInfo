@@ -44,7 +44,6 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
                 BuildingModel model = ConvertToModel(viewModel);
                 BuildingClassification classification = _bll.GetClassification(model);
                 BuildingType type = _bll.GetType(model);
-
                 string successMessage =
                     $"Building information entry successful for {viewModel.Name} in "
                     + $"{viewModel.AddressCity}! This is a {classification} {type} building.";

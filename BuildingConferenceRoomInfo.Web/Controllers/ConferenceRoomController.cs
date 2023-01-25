@@ -42,9 +42,11 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
 
             if (ModelState.IsValid)
             {
+                ConferenceRoomModel model = ConvertToModel(viewModel);
+                ConferenceRoomSize size = _bll.GetSize(model);
                 string successMessage =
                     $"Conference room information entry successful for {viewModel.Name} in "
-                    + $"{viewModel.BuildingName}!";
+                    + $"{viewModel.BuildingName}! This is a {size} conference room.";
                 ModelState.Clear();
                 viewModel = new ConferenceRoomCreatorViewModel
                 {
@@ -89,6 +91,18 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             }
 
             return viewModels;
+        }
+
+        private ConferenceRoomModel ConvertToModel(ConferenceRoomCreatorViewModel viewModel)
+        {
+            return new ConferenceRoomModel
+            {
+                Name = viewModel.Name,
+                BuildingName = viewModel.BuildingName,
+                Phone = viewModel.Phone,
+                IsAVCapable = viewModel.IsAVCapable,
+                Capacity = viewModel.Capacity,
+            };
         }
     }
 }
