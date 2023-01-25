@@ -19,10 +19,10 @@ Information" Site to add Business Logic
 >     office. Here are the requirements:
 >     - [x] A campus is located in Louisville.
 >     - [x] A satellite office is located anywhere else.
->   - [ ] Also call a Business Logic method to determine whether the
+>   - [x] Also call a Business Logic method to determine whether the
 >     building is standard or a tower. Here are the requirements:
->     - [ ] A building with more than 5 floors is considered a tower.
->     - [ ] A building with 5 or fewer floors is considered standard.
+>     - [x] A building with more than 5 floors is considered a tower.
+>     - [x] A building with 5 or fewer floors is considered standard.
 > - [ ] For Conference Rooms, we want to know if a newly added room is
 >   considered small, medium, or large.
 >   - [ ] After a user enters conference room information, call a

@@ -11,6 +11,12 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
         Satellite
     }
 
+    public enum BuildingType
+    {
+        Standard = 1,
+        Tower
+    }
+
     internal class BuildingBLL
     {
         private List<BuildingModel> _models;
@@ -30,6 +36,18 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
             else
             {
                 return BuildingClassification.Satellite;
+            }
+        }
+
+        public BuildingType GetType(BuildingModel model)
+        {
+            if (5 < model.FloorCount)
+            {
+                return BuildingType.Tower;
+            }
+            else
+            {
+                return BuildingType.Standard;
             }
         }
 

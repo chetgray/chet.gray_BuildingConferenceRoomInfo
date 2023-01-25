@@ -41,6 +41,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             {
                 BuildingModel model = ConvertToModel(viewModel);
                 BuildingClassification classification = _bll.GetClassification(model);
+                BuildingType type = _bll.GetType(model);
                 viewModel.IsSuccess = true;
             }
             //BuildingModel model = ConvertToModel(viewModel);
