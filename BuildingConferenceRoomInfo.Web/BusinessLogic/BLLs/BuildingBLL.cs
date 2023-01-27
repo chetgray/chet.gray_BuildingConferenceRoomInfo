@@ -1,12 +1,59 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using BuildingConferenceRoomInfo.Web.Models;
 
 namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
 {
+    public enum BuildingClassification
+    {
+        Campus = 1,
+        Satellite
+    }
+
+    public enum BuildingType
+    {
+        Standard = 1,
+        Tower
+    }
+
     internal class BuildingBLL
     {
         private List<BuildingModel> _models;
+
+        public BuildingClassification GetClassification(BuildingModel model)
+        {
+            if (
+                model.AddressCity.Equals("Louisville", StringComparison.OrdinalIgnoreCase)
+                && (
+                    model.AddressState.Equals("Kentucky", StringComparison.OrdinalIgnoreCase)
+                    || model.AddressState.Equals("KY", StringComparison.OrdinalIgnoreCase)
+                )
+            )
+            {
+                return BuildingClassification.Campus;
+            }
+            else
+            {
+                return BuildingClassification.Satellite;
+            }
+        }
+
+        public BuildingType? GetType(BuildingModel model)
+        {
+            if (model.FloorCount >= 6)
+            {
+                return BuildingType.Tower;
+            }
+            else if (model.FloorCount >= 1)
+            {
+                return BuildingType.Standard;
+            }
+            else
+            {
+                return null;
+            }
+        }
 
         public List<BuildingModel> GetAll()
         {

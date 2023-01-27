@@ -37,10 +37,23 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         [HttpPost]
         public ActionResult Create(ConferenceRoomCreatorViewModel viewModel)
         {
-            viewModel.IsSuccess = false;
+            viewModel.AlertContext = null;
+            viewModel.AlertMessage = "";
+
             if (ModelState.IsValid)
             {
-                viewModel.IsSuccess = true;
+                ConferenceRoomModel model = ConvertToModel(viewModel);
+                ConferenceRoomSize? size = _bll.GetSize(model);
+                string successMessage =
+                    $"Conference room information entry successful for {viewModel.Name} in "
+                    + $"{viewModel.BuildingName}! This is a "
+                    + $"{size?.ToString() ?? "undetermined size"} conference room.";
+                ModelState.Clear();
+                viewModel = new ConferenceRoomCreatorViewModel
+                {
+                    AlertContext = BootstrapContext.Success,
+                    AlertMessage = successMessage
+                };
             }
             //ConferenceRoomModel model = ConvertToModel(viewModel);
             //_bll.Create(model);
@@ -60,7 +73,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             {
                 Id = model.Id,
                 Name = model.Name,
-                BuildingName = model.Building.Name,
+                BuildingName = model.BuildingName,
                 Phone = model.Phone,
                 IsAVCapable = model.IsAVCapable,
                 Capacity = model.Capacity,
@@ -79,6 +92,18 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             }
 
             return viewModels;
+        }
+
+        private ConferenceRoomModel ConvertToModel(ConferenceRoomCreatorViewModel viewModel)
+        {
+            return new ConferenceRoomModel
+            {
+                Name = viewModel.Name,
+                BuildingName = viewModel.BuildingName,
+                Phone = viewModel.Phone,
+                IsAVCapable = viewModel.IsAVCapable,
+                Capacity = viewModel.Capacity,
+            };
         }
     }
 }

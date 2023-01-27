@@ -36,10 +36,24 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
         [HttpPost]
         public ActionResult Create(BuildingCreatorViewModel viewModel)
         {
-            viewModel.IsSuccess = false;
+            viewModel.AlertContext = null;
+            viewModel.AlertMessage = "";
+
             if (ModelState.IsValid)
             {
-                viewModel.IsSuccess = true;
+                BuildingModel model = ConvertToModel(viewModel);
+                BuildingClassification classification = _bll.GetClassification(model);
+                BuildingType? type = _bll.GetType(model);
+                string successMessage =
+                    $"Building information entry successful for {viewModel.Name} in "
+                    + $"{viewModel.AddressCity}! This is a {classification} "
+                    + $"{type?.ToString() ?? "undetermined type"} building.";
+                ModelState.Clear();
+                viewModel = new BuildingCreatorViewModel
+                {
+                    AlertContext = BootstrapContext.Success,
+                    AlertMessage = successMessage
+                };
             }
             //BuildingModel model = ConvertToModel(viewModel);
             //_bll.Create(model);
@@ -80,6 +94,22 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             }
 
             return viewModels;
+        }
+
+        private BuildingModel ConvertToModel(BuildingCreatorViewModel viewModel)
+        {
+            return new BuildingModel
+            {
+                Name = viewModel.Name,
+                AddressStreet = viewModel.AddressStreet,
+                AddressCity = viewModel.AddressCity,
+                AddressState = viewModel.AddressState,
+                AddressZip = viewModel.AddressZip,
+                AddressCountry = viewModel.AddressCountry,
+                MainPhone = viewModel.MainPhone,
+                FloorCount = viewModel.FloorCount,
+                ConferenceRoomCount = viewModel.ConferenceRoomCount,
+            };
         }
     }
 }

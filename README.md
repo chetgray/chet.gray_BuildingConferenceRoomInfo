@@ -1,6 +1,38 @@
 BuildingConferenceRoomInfo
 ==========================
 
+User Story #211911: MVC: Update "Building and Conference Room
+Information" Site to add Business Logic
+---------------------------------------
+
+> Update your "Building and Conference Room Information" application (US
+> 211908, 211909, 211910) to:
+>
+> - [x] For Buildings, we want to know if the building is considered a
+>   campus or a satellite office (let's call this the building
+>   classification). We also want to know if the building is considered
+>   standard or a tower (we can call this our building type). Show both
+>   of these determinations in the success message on the data entry
+>   page.
+>   - [x] After the user enters building information, call a Business
+>     Logic method to determine whether it's a campus or a satellite
+>     office. Here are the requirements:
+>     - [x] A campus is located in Louisville.
+>     - [x] A satellite office is located anywhere else.
+>   - [x] Also call a Business Logic method to determine whether the
+>     building is standard or a tower. Here are the requirements:
+>     - [x] A building with more than 5 floors is considered a tower.
+>     - [x] A building with 5 or fewer floors is considered standard.
+> - [x] For Conference Rooms, we want to know if a newly added room is
+>   considered small, medium, or large.
+>   - [x] After a user enters conference room information, call a
+>     Business Logic method to determine the room size. Show the size
+>     along with the success message on the data entry page.
+>   - [x] Here are the requirements:
+>     - [x] Small: 10 or fewer people capacity
+>     - [x] Medium: Between 11 and 20 people capacity
+>     - [x] Large: More than 20 people capacity
+
 User Story #211910: MVC: Update "Building and Conference Room
 Information" Site to add better routing
 ---------------------------------------
