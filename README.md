@@ -9,17 +9,17 @@ Information" Site to add Data Access
 > 211909, 211910, 211911) to talk to a database.
 >
 > - [ ] Within the database, create:
->   - [ ] New table:  BuildingInformation
->     - [ ] Id
->     - [ ] Building Name
->     - [ ] Building Address - Street
->     - [ ] Build Address - City
->     - [ ] Building Address - State
->     - [ ] Building Address - Zip
->     - [ ] Building Address - Country
->     - [ ] Build Main Phone Number
->     - [ ] Number of Floors
->     - [ ] Number of Conference Rooms
+>   - [x] New table:  BuildingInformation
+>     - [x] Id
+>     - [x] Building Name
+>     - [x] Building Address - Street
+>     - [x] Build Address - City
+>     - [x] Building Address - State
+>     - [x] Building Address - Zip
+>     - [x] Building Address - Country
+>     - [x] Build Main Phone Number
+>     - [x] Number of Floors
+>     - [x] Number of Conference Rooms
 >   - [ ] New Table:  ConferenceRoomInformation
 >     - [ ] Id
 >     - [ ] Conference Room Name
