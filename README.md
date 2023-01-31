@@ -31,8 +31,8 @@ Information" Site to add Data Access
 >   - [x] New Stored Procedure:  Get all Conference Room Information
 > - [x] Create SQL to INSERT new data into both tables.  Let's have at
 >   least 5 buildings and at least 20 conference rooms.
-> - [ ] Change the app to add Data Access as we discussed.
->   - [ ] You'll want to have a new class library with a DataAccess
+> - [x] Change the app to add Data Access as we discussed.
+>   - [x] You'll want to have a new class library with a DataAccess
 >     namespace, a Repository namespace, and a DTOs namespace.
 > - [ ] Update the functionality of your app as follows:
 >   - [ ] When the user clicks the "Building Information" link, show
