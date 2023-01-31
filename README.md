@@ -28,7 +28,7 @@ Information" Site to add Data Access
 >     - [x] Conference Room - A/V Capable (true / false)
 >     - [x] Conference Room Capacity
 >   - [x] New Stored Procedure:  Get all Building Information
->   - [ ] New Stored Procedure:  Get all Conference Room Information
+>   - [x] New Stored Procedure:  Get all Conference Room Information
 > - [ ] Create SQL to INSERT new data into both tables.  Let's have at
 >   least 5 buildings and at least 20 conference rooms.
 > - [ ] Change the app to add Data Access as we discussed.

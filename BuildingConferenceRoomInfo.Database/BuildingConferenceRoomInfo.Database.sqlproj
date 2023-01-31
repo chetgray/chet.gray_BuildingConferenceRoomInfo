@@ -63,5 +63,6 @@
     <Build Include="Tables\Building.sql" />
     <Build Include="Tables\ConferenceRoom.sql" />
     <Build Include="Stored Procedures\spA_Building_GetAll.sql" />
+    <Build Include="Stored Procedures\spA_ConferenceRoom_GetAll.sql" />
   </ItemGroup>
 </Project>
