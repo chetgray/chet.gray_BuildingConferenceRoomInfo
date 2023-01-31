@@ -34,11 +34,11 @@ Information" Site to add Data Access
 > - [x] Change the app to add Data Access as we discussed.
 >   - [x] You'll want to have a new class library with a DataAccess
 >     namespace, a Repository namespace, and a DTOs namespace.
-> - [ ] Update the functionality of your app as follows:
->   - [ ] When the user clicks the "Building Information" link, show
+> - [x] Update the functionality of your app as follows:
+>   - [x] When the user clicks the "Building Information" link, show
 >     them the View with all of the building information - but no longer
 >     get it from hardcode - get it from the database.
->   - [ ] When the user clicks the "Conference RoomInformation" link,
+>   - [x] When the user clicks the "Conference RoomInformation" link,
 >     show them the View with all of the conference room information -
 >     but no longer get it from hardcode - get it from the database.
 
