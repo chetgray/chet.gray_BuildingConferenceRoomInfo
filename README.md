@@ -20,13 +20,13 @@ Information" Site to add Data Access
 >     - [x] Build Main Phone Number
 >     - [x] Number of Floors
 >     - [x] Number of Conference Rooms
->   - [ ] New Table:  ConferenceRoomInformation
->     - [ ] Id
->     - [ ] Conference Room Name
->     - [ ] Conference Room Building
->     - [ ] Conference Room Phone Number
->     - [ ] Conference Room - A/V Capable (true / false)
->     - [ ] Conference Room Capacity
+>   - [x] New Table:  ConferenceRoomInformation
+>     - [x] Id
+>     - [x] Conference Room Name
+>     - [x] Conference Room Building
+>     - [x] Conference Room Phone Number
+>     - [x] Conference Room - A/V Capable (true / false)
+>     - [x] Conference Room Capacity
 >   - [ ] New Stored Procedure:  Get all Building Information
 >   - [ ] New Stored Procedure:  Get all Conference Room Information
 > - [ ] Create SQL to INSERT new data into both tables.  Let's have at
