@@ -1,6 +1,47 @@
 BuildingConferenceRoomInfo
 ==========================
 
+User Story #211912: MVC: Update "Building and Conference Room
+Information" Site to add Data Access
+------------------------------------
+
+> Update our Building and Conference Room Information app (US 211908,
+> 211909, 211910, 211911) to talk to a database.
+>
+> - [ ] Within the database, create:
+>   - [ ] New table:  BuildingInformation
+>     - [ ] Id
+>     - [ ] Building Name
+>     - [ ] Building Address - Street
+>     - [ ] Build Address - City
+>     - [ ] Building Address - State
+>     - [ ] Building Address - Zip
+>     - [ ] Building Address - Country
+>     - [ ] Build Main Phone Number
+>     - [ ] Number of Floors
+>     - [ ] Number of Conference Rooms
+>   - [ ] New Table:  ConferenceRoomInformation
+>     - [ ] Id
+>     - [ ] Conference Room Name
+>     - [ ] Conference Room Building
+>     - [ ] Conference Room Phone Number
+>     - [ ] Conference Room - A/V Capable (true / false)
+>     - [ ] Conference Room Capacity
+>   - [ ] New Stored Procedure:  Get all Building Information
+>   - [ ] New Stored Procedure:  Get all Conference Room Information
+> - [ ] Create SQL to INSERT new data into both tables.  Let's have at
+>   least 5 buildings and at least 20 conference rooms.
+> - [ ] Change the app to add Data Access as we discussed.
+>   - [ ] You'll want to have a new class library with a DataAccess
+>     namespace, a Repository namespace, and a DTOs namespace.
+> - [ ] Update the functionality of your app as follows:
+>   - [ ] When the user clicks the "Building Information" link, show
+>     them the View with all of the building information - but no longer
+>     get it from hardcode - get it from the database.
+>   - [ ] When the user clicks the "Conference RoomInformation" link,
+>     show them the View with all of the conference room information -
+>     but no longer get it from hardcode - get it from the database.
+
 User Story #211911: MVC: Update "Building and Conference Room
 Information" Site to add Business Logic
 ---------------------------------------
