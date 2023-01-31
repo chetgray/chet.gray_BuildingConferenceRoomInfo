@@ -65,4 +65,7 @@
     <Build Include="Stored Procedures\spA_Building_GetAll.sql" />
     <Build Include="Stored Procedures\spA_ConferenceRoom_GetAll.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="BuildingConferenceRoomInfo.Database.local.publish.xml" />
+  </ItemGroup>
 </Project>
