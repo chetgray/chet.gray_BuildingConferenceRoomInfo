@@ -58,14 +58,18 @@
     <Folder Include="Properties" />
     <Folder Include="Tables" />
     <Folder Include="Stored Procedures" />
+    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Building.sql" />
     <Build Include="Tables\ConferenceRoom.sql" />
     <Build Include="Stored Procedures\spA_Building_GetAll.sql" />
     <Build Include="Stored Procedures\spA_ConferenceRoom_GetAll.sql" />
+    <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildingConferenceRoomInfo.Database.local.publish.xml" />
+    <None Include="Scripts\InsertBuildingDemoData.sql" />
+    <None Include="Scripts\InsertConferenceRoomDemoData.sql" />
   </ItemGroup>
 </Project>

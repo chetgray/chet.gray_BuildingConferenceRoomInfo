@@ -8,7 +8,7 @@ Information" Site to add Data Access
 > Update our Building and Conference Room Information app (US 211908,
 > 211909, 211910, 211911) to talk to a database.
 >
-> - [ ] Within the database, create:
+> - [x] Within the database, create:
 >   - [x] New table:  BuildingInformation
 >     - [x] Id
 >     - [x] Building Name
@@ -29,7 +29,7 @@ Information" Site to add Data Access
 >     - [x] Conference Room Capacity
 >   - [x] New Stored Procedure:  Get all Building Information
 >   - [x] New Stored Procedure:  Get all Conference Room Information
-> - [ ] Create SQL to INSERT new data into both tables.  Let's have at
+> - [x] Create SQL to INSERT new data into both tables.  Let's have at
 >   least 5 buildings and at least 20 conference rooms.
 > - [ ] Change the app to add Data Access as we discussed.
 >   - [ ] You'll want to have a new class library with a DataAccess
