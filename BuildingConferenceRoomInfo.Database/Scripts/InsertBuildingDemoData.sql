@@ -13,7 +13,7 @@
 SELECT t.*
 FROM (
     SELECT 1 [Id]
-        , 'Louisville HQ' AS [Name]
+        , 'Louisville (in the database) HQ' AS [Name]
         , '888 W Market St' AS [AddressStreet]
         , 'Louisville' AS [AddressCity]
         , 'KY' AS [AddressState]

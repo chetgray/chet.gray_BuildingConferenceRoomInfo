@@ -9,7 +9,7 @@
 SELECT t.*
 FROM (
     SELECT 1 AS [Id]
-        , 'Louisville 101' AS [Name]
+        , 'Louisville (in the database) 101' AS [Name]
         , 'Louisville HQ' AS [BuildingName]
         , '(844) 492-9782 ext. 1' AS [Phone]
         , 0 AS [IsAVCapable]
