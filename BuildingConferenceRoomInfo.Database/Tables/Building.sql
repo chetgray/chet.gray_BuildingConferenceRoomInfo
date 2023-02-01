@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[Building] (
-      [Id]                  INT            NOT NULL
+      [Id]                  INT IDENTITY   NOT NULL
         CONSTRAINT [PK_Building_Id] PRIMARY KEY
     , [Name]                NVARCHAR(4000) NOT NULL
     , [AddressStreet]       NVARCHAR(4000) NOT NULL

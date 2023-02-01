@@ -1,5 +1,5 @@
 ﻿CREATE TABLE [dbo].[ConferenceRoom] (
-      [Id]           INT            NOT NULL
+      [Id]           INT IDENTITY   NOT NULL
         CONSTRAINT [PK_ConferenceRoom_Id] PRIMARY KEY
     , [Name]         NVARCHAR(4000) NOT NULL
     , [BuildingName] NVARCHAR(4000) NOT NULL

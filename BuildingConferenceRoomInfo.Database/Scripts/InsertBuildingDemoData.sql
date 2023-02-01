@@ -1,6 +1,5 @@
 ﻿INSERT INTO [Building] (
-    [Id]
-    , [Name]
+    [Name]
     , [AddressStreet]
     , [AddressCity]
     , [AddressState]
@@ -12,8 +11,7 @@
     )
 SELECT t.*
 FROM (
-    SELECT 1 [Id]
-        , 'Louisville (in the database) HQ' AS [Name]
+    SELECT 'Louisville (in the database) HQ' AS [Name]
         , '888 W Market St' AS [AddressStreet]
         , 'Louisville' AS [AddressCity]
         , 'KY' AS [AddressState]
@@ -25,8 +23,7 @@ FROM (
     
     UNION ALL
     
-    SELECT 2
-        , 'Chicago'
+    SELECT 'Chicago'
         , '1330 W Fulton St #300'
         , 'Chicago'
         , 'IL'
@@ -38,8 +35,7 @@ FROM (
     
     UNION ALL
     
-    SELECT 3
-        , 'Denver'
+    SELECT 'Denver'
         , '7900 E Union Ave #400'
         , 'Denver'
         , 'CO'
@@ -51,8 +47,7 @@ FROM (
     
     UNION ALL
     
-    SELECT 4
-        , 'Duluth'
+    SELECT 'Duluth'
         , '2055 Sugarloaf Cir'
         , 'Duluth'
         , 'GA'
@@ -64,8 +59,7 @@ FROM (
     
     UNION ALL
     
-    SELECT 5
-        , 'Lehi'
+    SELECT 'Lehi'
         , '1550 Digital Dr'
         , 'Lehi'
         , 'UT'
