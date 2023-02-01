@@ -7,9 +7,6 @@ namespace BuildingConferenceRoomInfo.Data.Repositories
 {
     public class ConferenceRoomRepository : BaseRepository
     {
-        /// <inheritdoc cref="BaseRepository()"/>
-        public ConferenceRoomRepository() { }
-
         public List<ConferenceRoomDTO> GetAll()
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
