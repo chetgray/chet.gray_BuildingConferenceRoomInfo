@@ -36,10 +36,8 @@ namespace BuildingConferenceRoomInfo.Data.DataAccess
                 {
                     command.Parameters.AddWithValue(parameter.Key, parameter.Value);
                 }
-                // Get the last DataTable in the result DataSet
-                DataSet dataSet = new DataSet();
-                adapter.Fill(dataSet);
-                dataTable = dataSet.Tables[dataSet.Tables.Count - 1];
+                // Get the first DataTable in the result DataSet
+                adapter.Fill(dataTable);
             }
 
             return dataTable;
