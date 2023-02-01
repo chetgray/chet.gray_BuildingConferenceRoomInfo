@@ -56,10 +56,6 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
 
         private ConferenceRoomModel ConvertToModel(ConferenceRoomDTO dto)
         {
-            if (dto is null)
-            {
-                return null;
-            }
             return new ConferenceRoomModel
             {
                 Id = dto.Id,

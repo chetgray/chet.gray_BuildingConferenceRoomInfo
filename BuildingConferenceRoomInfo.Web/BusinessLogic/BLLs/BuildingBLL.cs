@@ -76,10 +76,6 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
 
         private BuildingModel ConvertToModel(BuildingDTO dto)
         {
-            if (dto is null)
-            {
-                return null;
-            }
             return new BuildingModel
             {
                 Id = dto.Id,
