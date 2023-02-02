@@ -7,15 +7,33 @@ namespace BuildingConferenceRoomInfo.Data.Repositories
 {
     public class ConferenceRoomRepository : BaseRepository
     {
+        public ConferenceRoomDTO Insert(ConferenceRoomDTO dto)
+        {
+            Dictionary<string, object> parameters = new Dictionary<string, object>
+            {
+                { "@conferenceRoomName", dto.Name },
+                { "@conferenceRoomBuildingName", dto.BuildingName },
+                { "@conferenceRoomPhone", dto.Phone },
+                { "@conferenceRoomIsAVCapable", dto.IsAVCapable },
+                { "@conferenceRoomCapacity", dto.Capacity }
+            };
+            DataTable resultTable = _dal.ExecuteStoredProcedure(
+                "spA_ConferenceRoom_Insert",
+                parameters
+            );
+
+            return ConvertToDto(resultTable.Rows[0]);
+        }
+
         public List<ConferenceRoomDTO> GetAll()
         {
             Dictionary<string, object> parameters = new Dictionary<string, object>();
-            DataTable dataTable = _dal.ExecuteStoredProcedure(
+            DataTable resultTable = _dal.ExecuteStoredProcedure(
                 "spA_ConferenceRoom_GetAll",
                 parameters
             );
             List<ConferenceRoomDTO> dtos = new List<ConferenceRoomDTO>();
-            foreach (DataRow row in dataTable.Rows)
+            foreach (DataRow row in resultTable.Rows)
             {
                 dtos.Add(ConvertToDto(row));
             }

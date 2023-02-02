@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using BuildingConferenceRoomInfo.Data.DTOs;
 using BuildingConferenceRoomInfo.Data.Repositories;
@@ -20,6 +21,12 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
         public ConferenceRoomBLL()
         {
             _repository = new ConferenceRoomRepository();
+        }
+
+        public ConferenceRoomModel Insert(ConferenceRoomModel model)
+        {
+            ConferenceRoomDTO dto = ConvertToDto(model);
+            return ConvertToModel(_repository.Insert(dto));
         }
 
         public ConferenceRoomSize? GetSize(ConferenceRoomModel model)
@@ -64,6 +71,24 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
                 Phone = dto.Phone,
                 IsAVCapable = dto.IsAVCapable,
                 Capacity = dto.Capacity,
+            };
+        }
+
+        private ConferenceRoomDTO ConvertToDto(ConferenceRoomModel model)
+        {
+            return new ConferenceRoomDTO
+            {
+                Id = model.Id,
+                Name = model.Name,
+                BuildingName = model.BuildingName,
+                Phone = model.Phone,
+                IsAVCapable = model.IsAVCapable,
+                Capacity =
+                    model.Capacity
+                    ?? throw new NullReferenceException(
+                        $"{nameof(model)}.{nameof(model.Capacity)} not set to an instance of "
+                            + $"{typeof(ConferenceRoomDTO).GetProperty(nameof(ConferenceRoomDTO.Capacity)).PropertyType}."
+                    ),
             };
         }
     }

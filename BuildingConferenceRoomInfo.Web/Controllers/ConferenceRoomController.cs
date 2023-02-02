@@ -10,7 +10,6 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
     public class ConferenceRoomController : Controller
     {
         private readonly ConferenceRoomBLL _bll = new ConferenceRoomBLL();
-        private readonly BuildingController _buildingController = new BuildingController();
 
         // GET: ConferenceRoom
         public ActionResult Index()
@@ -43,6 +42,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             if (ModelState.IsValid)
             {
                 ConferenceRoomModel model = ConvertToModel(viewModel);
+                model = _bll.Insert(model);
                 ConferenceRoomSize? size = _bll.GetSize(model);
                 string successMessage =
                     $"Conference room information entry successful for {viewModel.Name} in "
@@ -55,8 +55,6 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
                     AlertMessage = successMessage
                 };
             }
-            //ConferenceRoomModel model = ConvertToModel(viewModel);
-            //_bll.Create(model);
 
             return View(viewModel);
         }

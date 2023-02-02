@@ -20,7 +20,7 @@ namespace BuildingConferenceRoomInfo.Data.DataAccess
             Dictionary<string, object> parameters
         )
         {
-            DataTable dataTable = new DataTable();
+            DataTable resultTable = new DataTable();
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
             using (
@@ -37,10 +37,10 @@ namespace BuildingConferenceRoomInfo.Data.DataAccess
                     command.Parameters.AddWithValue(parameter.Key, parameter.Value);
                 }
                 // Get the first DataTable in the result DataSet
-                adapter.Fill(dataTable);
+                adapter.Fill(resultTable);
             }
 
-            return dataTable;
+            return resultTable;
         }
     }
 }
