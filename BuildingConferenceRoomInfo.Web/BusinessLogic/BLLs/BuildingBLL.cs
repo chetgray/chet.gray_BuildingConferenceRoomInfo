@@ -28,6 +28,12 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
             _repository = new BuildingRepository();
         }
 
+        public BuildingModel Insert(BuildingModel model)
+        {
+            BuildingDTO dto = ConvertToDto(model);
+            return ConvertToModel(_repository.Insert(dto));
+        }
+
         public BuildingClassification GetClassification(BuildingModel model)
         {
             if (
@@ -88,6 +94,33 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
                 MainPhone = dto.MainPhone,
                 FloorCount = dto.FloorCount,
                 ConferenceRoomCount = dto.ConferenceRoomCount,
+            };
+        }
+
+        private BuildingDTO ConvertToDto(BuildingModel model)
+        {
+            return new BuildingDTO
+            {
+                Id = model.Id,
+                Name = model.Name,
+                AddressStreet = model.AddressStreet,
+                AddressCity = model.AddressCity,
+                AddressState = model.AddressState,
+                AddressZip = model.AddressZip,
+                AddressCountry = model.AddressCountry,
+                MainPhone = model.MainPhone,
+                FloorCount =
+                    model.FloorCount
+                    ?? throw new NullReferenceException(
+                        $"{nameof(model)}.{nameof(model.FloorCount)} not set to an "
+                            + $"instance of {typeof(BuildingDTO).GetProperty(nameof(BuildingDTO.FloorCount)).PropertyType}."
+                    ),
+                ConferenceRoomCount =
+                    model.ConferenceRoomCount
+                    ?? throw new NullReferenceException(
+                        $"{nameof(model)}.{nameof(model.ConferenceRoomCount)} not set to an "
+                            + $"instance of {typeof(BuildingDTO).GetProperty(nameof(BuildingDTO.ConferenceRoomCount)).PropertyType}."
+                    ),
             };
         }
     }

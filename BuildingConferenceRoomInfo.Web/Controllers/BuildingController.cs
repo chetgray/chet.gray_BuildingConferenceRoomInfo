@@ -42,6 +42,7 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
             if (ModelState.IsValid)
             {
                 BuildingModel model = ConvertToModel(viewModel);
+                model = _bll.Insert(model);
                 BuildingClassification classification = _bll.GetClassification(model);
                 BuildingType? type = _bll.GetType(model);
                 string successMessage =
@@ -55,8 +56,6 @@ namespace BuildingConferenceRoomInfo.Web.Controllers
                     AlertMessage = successMessage
                 };
             }
-            //BuildingModel model = ConvertToModel(viewModel);
-            //_bll.Create(model);
 
             return View(viewModel);
         }

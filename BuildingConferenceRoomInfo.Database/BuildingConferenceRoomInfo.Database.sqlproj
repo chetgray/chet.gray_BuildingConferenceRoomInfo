@@ -67,6 +67,7 @@
     <Build Include="Stored Procedures\spA_ConferenceRoom_GetAll.sql" />
     <PostDeploy Include="Scripts\Script.PostDeployment.sql" />
     <Build Include="Stored Procedures\spA_ConferenceRoom_Insert.sql" />
+    <Build Include="Stored Procedures\spA_Building_Insert.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="BuildingConferenceRoomInfo.Database.local.publish.xml" />
