@@ -71,5 +71,6 @@
     <None Include="BuildingConferenceRoomInfo.Database.local.publish.xml" />
     <None Include="Scripts\InsertBuildingDemoData.sql" />
     <None Include="Scripts\InsertConferenceRoomDemoData.sql" />
+    <None Include="Scripts\SetupUser.sql" />
   </ItemGroup>
 </Project>

@@ -12,3 +12,4 @@ Post-Deployment Script Template
 
 :r .\InsertBuildingDemoData.sql
 :r .\InsertConferenceRoomDemoData.sql
+:r .\SetupUser.sql
