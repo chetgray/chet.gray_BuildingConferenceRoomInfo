@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Business layer for Building and Conference Room Info</Title>
+    <Company>Waystar</Company>
+    <PackageId>chet.gray_$(AssemblyName)</PackageId>
+    <Authors>Chet Gray &lt;chet.gray@waystar.com&gt;</Authors>
+    <Copyright>Copyright © Waystar 2023</Copyright>
+    <RepositoryUrl>https://tfs.waystar.com/Waystar/Education/_git/chet.gray_BuildingConferenceRoomInfo</RepositoryUrl>
+    <PackageProjectUrl>https://tfs.waystar.com/Waystar/Education/_git/chet.gray_BuildingConferenceRoomInfo</PackageProjectUrl>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
