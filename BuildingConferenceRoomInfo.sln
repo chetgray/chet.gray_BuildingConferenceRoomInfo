@@ -14,6 +14,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BuildingConferenceRoomInfo.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingConferenceRoomInfo.Data", "BuildingConferenceRoomInfo.Data\BuildingConferenceRoomInfo.Data.csproj", "{923AAFDF-F62B-4BB2-BCBC-4DCA779ADEC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingConferenceRoomInfo.Business", "BuildingConferenceRoomInfo.Business\BuildingConferenceRoomInfo.Business.csproj", "{CAC64E3C-D686-4281-B0EC-ED4712B98F0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,10 @@ Global
 		{923AAFDF-F62B-4BB2-BCBC-4DCA779ADEC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{923AAFDF-F62B-4BB2-BCBC-4DCA779ADEC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{923AAFDF-F62B-4BB2-BCBC-4DCA779ADEC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAC64E3C-D686-4281-B0EC-ED4712B98F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAC64E3C-D686-4281-B0EC-ED4712B98F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAC64E3C-D686-4281-B0EC-ED4712B98F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC64E3C-D686-4281-B0EC-ED4712B98F0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
