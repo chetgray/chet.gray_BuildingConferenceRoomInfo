@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 
+using BuildingConferenceRoomInfo.Business.Models;
 using BuildingConferenceRoomInfo.Data.DTOs;
 using BuildingConferenceRoomInfo.Data.Repositories;
-using BuildingConferenceRoomInfo.Web.Models;
 
-namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
+namespace BuildingConferenceRoomInfo.Business.BLLs
 {
     public enum ConferenceRoomSize
     {
@@ -13,7 +13,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
         Large
     }
 
-    internal class ConferenceRoomBLL
+    public class ConferenceRoomBLL
     {
         private readonly ConferenceRoomRepository _repository;
 

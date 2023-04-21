@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using BuildingConferenceRoomInfo.Business.Models;
 using BuildingConferenceRoomInfo.Data.DTOs;
 using BuildingConferenceRoomInfo.Data.Repositories;
-using BuildingConferenceRoomInfo.Web.Models;
 
-namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
+namespace BuildingConferenceRoomInfo.Business.BLLs
 {
     public enum BuildingClassification
     {
@@ -19,7 +19,7 @@ namespace BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs
         Tower
     }
 
-    internal class BuildingBLL
+    public class BuildingBLL
     {
         private readonly BuildingRepository _repository;
 

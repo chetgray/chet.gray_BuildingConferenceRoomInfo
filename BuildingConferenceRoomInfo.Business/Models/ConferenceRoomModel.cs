@@ -1,4 +1,4 @@
-﻿namespace BuildingConferenceRoomInfo.Web.Models
+﻿namespace BuildingConferenceRoomInfo.Business.Models
 {
     public class ConferenceRoomModel
     {

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 
-using BuildingConferenceRoomInfo.Web.BusinessLogic.BLLs;
-using BuildingConferenceRoomInfo.Web.Models;
+using BuildingConferenceRoomInfo.Business.BLLs;
+using BuildingConferenceRoomInfo.Business.Models;
 using BuildingConferenceRoomInfo.Web.ViewModels;
 
 namespace BuildingConferenceRoomInfo.Web.Controllers
